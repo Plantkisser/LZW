@@ -56,18 +56,14 @@ int main(int argc, char const *argv[])
 		do
 		{
 			inp.read(buf, CNT);
-			//std:: cout << "*" << std:: endl;
 
 			int cnt = inp.gcount();
-			//std:: cout << cnt << std:: endl;
 			for(int i = 0; i < cnt; ++i)
 			{
-				//std:: cout << "*" << std:: endl;			
 				int num = voc.insert(buf[i]);
 				max = num > max ? num : max;
 				if (num >= 0) code.push_back(num);
 			}
-			//std:: cout << "*" << std:: endl;		
 
 		} while (inp.gcount() == CNT);
 

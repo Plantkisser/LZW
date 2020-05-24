@@ -95,11 +95,7 @@ String String:: operator+=(const String& rhs)
 	}
 	tmp.len_ = len_  + rhs.len_; 
 
-	//std:: cout << tmp.str_ << len_ + rhs.len_ <<  std:: endl;
-
 	swap(tmp);
-
-	//std:: cout << str_ << len_ + rhs.len_ <<  std:: endl;
 
 	return *this;
 
@@ -132,15 +128,11 @@ void String:: swap(String& other)
 	other.str_ = tmp;
 	std:: swap(other.len_, len_);
 	std:: swap(other.capacity_, capacity_);
-
-	//std:: cout << str_ << " " << other.str_ << std:: endl;
 }
 
 
 String:: ~String()
 {
-	//std:: cout << (int)str_[0] << std:: endl;
-
 	delete[] str_;
 	str_ = nullptr;
 }

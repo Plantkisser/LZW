@@ -36,7 +36,7 @@ void Vector<T>:: push_back(const T& val)
 		Vector copy(capacity_ * 2);
 		copy = *this;
 
-		swap(copy); // add std swap 
+		swap(copy);
 		capacity_ *= 2;
 	}
 
