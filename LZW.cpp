@@ -6,6 +6,7 @@
 #define CNT 100
 
 void convert (Vector<char>&, const Vector<int>&, int max);
+int get_pow (int num);
 
 int main(int argc, char const *argv[])
 {
@@ -89,9 +90,11 @@ int main(int argc, char const *argv[])
 
 //================================================================================//
 		
-		
+		ostrm << get_pow(max);
+
+
 		for (int j = 0; j < final.size(); ++j)
-			ostrm << (char)final[j];
+			ostrm << static_cast <char>(final[j]);
 
 		ostrm.close();
 	}
